@@ -1,7 +1,7 @@
 <?php
 
 //...
-public function ficheroAction($nobreFichero)
+public function ficheroAction($nombreFichero)
 {
    $kernel = $this->get('kernel');
    $path = $kernel->locateResource('@AppBundle/Resources/ficheros/'.$nombreFichero);

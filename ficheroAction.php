@@ -9,7 +9,7 @@ public function ficheroAction($nobreFichero)
    $response = new BinaryFileResponse($path)
    $response->headers->set('Content-Type', 'application/pdf');
    /** Cargar el fichero en el navegador
-   * //Utiliza ResponseHeaderBag::DISPOSITION_ATTACHMENT para guardar el fichero como adjunto
+   * Utiliza ResponseHeaderBag::DISPOSITION_ATTACHMENT para guardar el fichero como adjunto
    */
    $response->setContentDisposition(
       ResponseHeaderBag::DISPOSITION_INLINE,

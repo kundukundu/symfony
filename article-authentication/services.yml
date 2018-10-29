@@ -1,0 +1,13 @@
+parameters:
+    #...
+
+services:
+    #...
+    app.security.login_form_authenticator:
+        class: AppBundle\Security\LoginFormAuthenticator
+        arguments: ["@router", "@security.password_encoder"]
+    #...
+    security.authentication.listener.form:
+        class: AppBundle\EventListener\UsernamePasswordFormAuthenticationListener
+        parent: security.authentication.listener.abstract
+        abstract: true

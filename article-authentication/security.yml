@@ -1,0 +1,12 @@
+security:
+    #...
+
+    firewalls:
+        #...
+
+        main:
+            anonymous: true
+            # activate different ways to authenticate
+            guard:
+                authenticators:
+                    - app.security.login_form_authenticator
